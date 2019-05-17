@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -5,10 +6,17 @@ import { CoreRoutingModule } from './core-routing.module';
 import { NavbarComponent } from './comp/navbar/navbar.component';
 
 @NgModule({
-  declarations: [NavbarComponent],
+  declarations: [
+    NavbarComponent
+  ],
   imports: [
     CommonModule,
     CoreRoutingModule
+  ],
+  exports: [
+    NavbarComponent
+  ],
+  providers: [
   ]
 })
 export class CoreModule { }
