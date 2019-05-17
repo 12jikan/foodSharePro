@@ -40,6 +40,7 @@ router.post('/recipes', (req, res) => {
         date: Date.now(),
         title: req.body.title,
         desc: req.body.desc,
+        assets: req.body.assets,
         steps: req.body.steps,
     };
 

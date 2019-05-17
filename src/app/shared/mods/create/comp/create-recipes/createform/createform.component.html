@@ -1,3 +1,69 @@
-<p>
-  createform works!
-</p>
+<div class="mt-25">
+
+  <app-formpt1></app-formpt1>
+
+  <div class="field has-text-centered">
+    <h1>Select your tools and ingredients below</h1>
+  </div>
+
+  <!-- Dropdown Down -->
+  <app-formpt2></app-formpt2>
+  
+
+  <hr>
+
+  <div class="columns">
+    <h1 class="title is-size-4 has-text-centered column">Recipe Steps</h1>
+  </div>
+
+  <hr>
+
+  <div class="field has-addons">
+
+    <div class="control">
+      <input [(ngModel)]="stepInput" class="input is-rounded" type="text" placeholder="Normal input">
+    </div>
+
+    <div class="control">
+      <button (click)="addStep()" class="button is-info is-outlined is-rounded">
+        Add
+      </button>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <div class="select">
+        <select [(ngModel)]="amtTime">
+          <option>Select Dropdown</option>
+          <option *ngFor="let item of timeArr" [ngValue]="item">{{ item }}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="">
+
+      <div *ngIf="postObj.steps.length == 0" class="box">( NONE )</div>
+
+      <div *ngFor="let item of postObj.steps" class="box">
+        <h1>{{ item.step }}</h1>
+        <h1>{{ item.minutes }}</h1>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="field is-grouped">
+    <div class="control">
+      <button (click)="postRecipe()" class="button is-link">Submit</button>
+    </div>
+    <div class="control">
+      <button class="button is-text">Cancel</button>
+    </div>
+  </div>
+
+
+</div>

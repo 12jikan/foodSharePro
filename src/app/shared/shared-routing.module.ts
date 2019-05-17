@@ -11,6 +11,10 @@ const routes: Routes = [
     path: 'home', 
     loadChildren:'./mods/home/home.module#HomeModule' 
   },
+  {
+    path: 'create-recipe',
+    loadChildren: './mods/create/create.module#CreateModule'
+  }
 ];
 
 @NgModule({

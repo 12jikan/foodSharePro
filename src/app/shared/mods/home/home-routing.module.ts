@@ -5,7 +5,8 @@ import { HomepageComponent } from './comp/homepage/homepage.component';
 
 const routes: Routes = [
   { 
-    path: '', component: HomepageComponent },
+    path: '', component: HomepageComponent 
+  },
 ];
 
 @NgModule({

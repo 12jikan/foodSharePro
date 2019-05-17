@@ -7,7 +7,6 @@ const creds = require('../creds/mongodb/creds.json');
 const dbName = "foodShare";
 const uri = `mongodb+srv://12jikan:${creds.password}@cluster0-nxdlq.mongodb.net/${dbName}?retryWrites=true`;
 
-
 const ObjectId = mongoose.Types.ObjectId;
 
 // models go here

@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CreateRecipesComponent } from './comp/create-recipes/create-recipes.component';
 
 const routes: Routes = [
-  { path: 'create-recipe', component: CreateRecipesComponent },
+  { path: '', component: CreateRecipesComponent },
 
 ];
 
