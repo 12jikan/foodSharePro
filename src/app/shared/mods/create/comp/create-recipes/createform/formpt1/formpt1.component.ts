@@ -9,9 +9,9 @@ export class Formpt1Component implements OnInit {
 
   constructor() { }
 
-  authorName: String = "asdasd";
-  recipeTitle: String = "asdasd";
-  recipeDesc: String = "asdasd";
+  authorName: String;
+  recipeTitle: String;
+  recipeDesc: String;
 
   ngOnInit() {
   }

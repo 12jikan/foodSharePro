@@ -18,6 +18,8 @@ export class Formpt2Component implements OnInit {
   toolsTable = [];
   ingredientsTable = [];
 
+  
+
   ngOnInit() {
     this.getIngredients();
     this.getTools();

@@ -24,13 +24,10 @@
 </div>
 
 <div class="field">
-  @ViewChild(Formpt2Component) formpt2;
-  @ViewChild(Formpt3Compon
   <div class="">
-
-    <div *ngIf="postObj.steps.length == 0" class="box">( NONE )</div>
-
-    <div *ngFor="let item of postObj.steps" class="box">
+    <div *ngIf="stepsArr.length == 0" class="box">( NONE )</div>
+      
+    <div *ngFor="let item of stepsArr" class="box">
       <h1>{{ item.step }}</h1>
       <h1>{{ item.minutes }}</h1>
     </div>
