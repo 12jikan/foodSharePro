@@ -1,8 +1,10 @@
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { RecipeService } from '../../../../../services/recipes.service';
 import { AssetService } from '../../../../../services/assets.service';
+
 import { Formpt1Component } from './formpt1/formpt1.component';
 import { Formpt2Component } from './formpt2/formpt2.component';
+import { Formpt3Component } from './formpt3/formpt3.component';
 
 @Component({
   selector: 'app-createform',
@@ -17,6 +19,7 @@ export class CreateformComponent implements OnInit, AfterViewInit {
   
   @ViewChild(Formpt1Component) formpt1;
   @ViewChild(Formpt2Component) formpt2;
+  @ViewChild(Formpt3Component) formpt3;
   
   // posting object
   postObj = {

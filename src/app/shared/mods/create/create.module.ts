@@ -7,11 +7,12 @@ import { CreateRecipesComponent } from './comp/create-recipes/create-recipes.com
 import { CreateformComponent } from './comp/create-recipes/createform/createform.component';
 import { Formpt1Component } from './comp/create-recipes/createform/formpt1/formpt1.component';
 import { Formpt2Component } from './comp/create-recipes/createform/formpt2/formpt2.component';
+import { Formpt3Component } from './comp/create-recipes/createform/formpt3/formpt3.component';
 
 @NgModule({
   declarations: [
     CreateRecipesComponent, 
-    CreateformComponent, Formpt1Component, Formpt2Component,
+    CreateformComponent, Formpt1Component, Formpt2Component, Formpt3Component,
   ],
   imports: [
     CommonModule,

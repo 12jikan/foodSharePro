@@ -17,44 +17,8 @@
   </div>
 
   <hr>
-
-  <div class="field has-addons">
-
-    <div class="control">
-      <input [(ngModel)]="stepInput" class="input is-rounded" type="text" placeholder="Normal input">
-    </div>
-
-    <div class="control">
-      <button (click)="addStep()" class="button is-info is-outlined is-rounded">
-        Add
-      </button>
-    </div>
-
-  </div>
-
-  <div class="field">
-    <div class="control">
-      <div class="select">
-        <select [(ngModel)]="amtTime">
-          <option>Select Dropdown</option>
-          <option *ngFor="let item of timeArr" [ngValue]="item">{{ item }}</option>
-        </select>
-      </div>
-    </div>
-  </div>
-
-  <div class="field">
-    <div class="">
-
-      <div *ngIf="postObj.steps.length == 0" class="box">( NONE )</div>
-
-      <div *ngFor="let item of postObj.steps" class="box">
-        <h1>{{ item.step }}</h1>
-        <h1>{{ item.minutes }}</h1>
-      </div>
-
-    </div>
-  </div>
+  
+  <app-formpt3></app-formpt3>
 
   <div class="field is-grouped">
     <div class="control">
