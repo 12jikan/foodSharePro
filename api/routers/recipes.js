@@ -45,6 +45,7 @@ router.post('/recipes', (req, res) => {
         date: Date.now(),
         title: req.body.title,
         desc: req.body.desc,
+        image: req.body.image,
         assets: req.body.assets,
         steps: req.body.steps,
     };

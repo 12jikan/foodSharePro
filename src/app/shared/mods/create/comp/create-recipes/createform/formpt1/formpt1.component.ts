@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { 
   AngularFireStorage, 
   AngularFireStorageReference, 
   AngularFireUploadTask 
 } from '@angular/fire/storage';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-formpt1',
@@ -14,12 +15,15 @@ export class Formpt1Component implements OnInit {
 
   ref: AngularFireStorageReference;
   task: AngularFireUploadTask;
-
+  
   constructor(private afStorage: AngularFireStorage) { }
-
+  
   authorName: String;
   recipeTitle: String;
   recipeDesc: String;
+  downloadURL: Observable<any>;
+  filepath: String;
+  percentage;
 
   selectedFile = null;
 
@@ -28,11 +32,18 @@ export class Formpt1Component implements OnInit {
 
   onFileSelect(event) {
     this.selectedFile = event[0];
-    console.log(this.selectedFile);
+    console.log(this.selectedFile)
   };
 
   uploadFile() {
-    const _file = this.selectedFile;
-    const _filePath = Date.now + ''
+    const file = this.selectedFile;
+    const filePath = 'foodsharepics/' + 'test' + 'foodshareapi';
+    this.ref = this.afStorage.ref(filePath);
+    this.task = this.afStorage.upload(filePath, file);
+    this.downloadURL = this.ref.getDownloadURL();
+    console.log(this.downloadURL);
+    // const _task = _ref.put(_file)
+
+    console.log(filePath);
   };
 }

@@ -26,6 +26,10 @@ export class CreateformComponent implements OnInit, AfterViewInit, AfterViewChec
     name:  String,
     title: String,
     desc:  String,
+    image: {
+      filename: String,
+      downloadUrl: String,
+    },
     assets: {
       tools: [],
       ingredients: [],
@@ -56,13 +60,13 @@ export class CreateformComponent implements OnInit, AfterViewInit, AfterViewChec
     this.postObj.name = this.formpt1.authorName;
     this.postObj.title = this.formpt1.recipeTitle;
     this.postObj.desc = this.formpt1.recipeDesc;
+    this.postObj.image.filename = this.formpt1.filePath;
+    this.postObj.image.downloadUrl = this.formpt1.downloadUrl;
 
     this.postObj.assets.tools = this.formpt2.toolsTable;
     this.postObj.assets.ingredients = this.formpt2.ingredientsTable;
 
     this.postObj.steps = this.formpt3.stepsArr;
-
-    console.log(this.postObj)
   }
 
   // http post for adding the recipe instructions
