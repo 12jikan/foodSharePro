@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { 
   AngularFireStorage, 
   AngularFireStorageReference, 
@@ -33,5 +32,7 @@ export class Formpt1Component implements OnInit {
   };
 
   uploadFile() {
+    const _file = this.selectedFile;
+    const _filePath = Date.now + ''
   };
 }
