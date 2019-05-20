@@ -18,3 +18,14 @@
     <textarea [(ngModel)]="recipeDesc" class="textarea" placeholder="Recipe Description"></textarea>
   </div>
 </div>
+
+<label class="label">Upload File:</label>
+<div class="field is-grouped">
+  <div class="control">
+    <input type="file" name="file" id="myFile" (change)="onFileSelect($event.target.files)">
+  </div>
+  
+  <div class="control">
+    <button (click)="uploadFile()" class="button is-link">Submit</button>
+  </div>
+</div>

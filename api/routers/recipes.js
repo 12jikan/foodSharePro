@@ -3,10 +3,15 @@ const express = require('express');
 const router = express.Router();
 
 // stuff for mongoose|mongo
-const creds = require('../creds/mongodb/creds.json');
+// deprecated
+// const creds = require('../creds/mongodb/creds.json');
 const dbName = "foodShare";
-const uri = `mongodb+srv://12jikan:${creds.password}@cluster0-nxdlq.mongodb.net/${dbName}?retryWrites=true`;
+const HOST = "127.0.0.1";
+const PORT = "27017";
 
+// const uri = `mongodb+srv://12jikan:${creds.password}@cluster0-nxdlq.mongodb.net/${dbName}?retryWrites=true`;
+const uri = `mongodb://${HOST}:
+${PORT}/${dbName}`;
 
 const ObjectId = mongoose.Types.ObjectId;
 
