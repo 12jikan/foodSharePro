@@ -37,13 +37,13 @@ export class Formpt1Component implements OnInit {
 
   uploadFile() {
     const file = this.selectedFile;
-    const filePath = 'foodsharepics/' + 'test' + 'foodshareapi';
+    const filePath = 'foodsharepics/' + Date.now() + 'foodshareapi';
     this.ref = this.afStorage.ref(filePath);
     this.task = this.afStorage.upload(filePath, file);
-    this.downloadURL = this.ref.getDownloadURL();
+    
     console.log(this.downloadURL);
     // const _task = _ref.put(_file)
 
-    console.log(filePath);
+    // console.log(filePath);
   };
 }

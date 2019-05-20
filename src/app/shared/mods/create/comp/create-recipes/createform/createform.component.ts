@@ -5,6 +5,7 @@ import { AssetService } from '../../../../../services/assets.service';
 import { Formpt1Component } from './formpt1/formpt1.component';
 import { Formpt2Component } from './formpt2/formpt2.component';
 import { Formpt3Component } from './formpt3/formpt3.component';
+import { log } from 'util';
 
 @Component({
   selector: 'app-createform',
@@ -27,8 +28,8 @@ export class CreateformComponent implements OnInit, AfterViewInit, AfterViewChec
     title: String,
     desc:  String,
     image: {
-      filename: String,
       downloadUrl: String,
+      filename: String,
     },
     assets: {
       tools: [],
@@ -37,7 +38,7 @@ export class CreateformComponent implements OnInit, AfterViewInit, AfterViewChec
     steps:  [],
   }
   
-
+  
   tools: Object;
   ingredients: Object;
 
@@ -60,6 +61,7 @@ export class CreateformComponent implements OnInit, AfterViewInit, AfterViewChec
     this.postObj.name = this.formpt1.authorName;
     this.postObj.title = this.formpt1.recipeTitle;
     this.postObj.desc = this.formpt1.recipeDesc;
+
     this.postObj.image.filename = this.formpt1.filePath;
     this.postObj.image.downloadUrl = this.formpt1.downloadUrl;
 
@@ -72,6 +74,7 @@ export class CreateformComponent implements OnInit, AfterViewInit, AfterViewChec
   // http post for adding the recipe instructions
   postRecipe() {
     this._recipes.postRecipe(this.postObj);
+    console.log(this.postObj);
   }
 
 
